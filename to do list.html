@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum 6 - Eksperimen Mandiri</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Eksperimen Mandiri - Praktikum 6</h2>
+
+        <!-- [Poin 4] Fitur Sembunyikan/Tampilkan Paragraf -->
+        <section class="section-box">
+            <h3>Toggle Paragraf</h3>
+            <button id="btnToggle" type="button">Sembunyikan Paragraf</button>
+            <p id="targetParagraf" class="paragraf-box">
+                Ini adalah paragraf contoh yang tampilannya dapat disembunyikan atau ditampilkan kembali menggunakan manipulasi class CSS via JavaScript.
+            </p>
+        </section>
+
+        <!-- [Poin 1] To-do List dengan Tombol Hapus -->
+        <section class="section-box">
+            <h3>To-do List</h3>
+            <div class="todo-input-group">
+                <input type="text" id="todoInput" placeholder="Tambah tugas baru...">
+                <button id="btnAddTodo" type="button">Tambah</button>
+            </div>
+            <ul id="todoList">
+                <li>
+                    <span>Belajar HTML DOM</span>
+                    <button class="btn-delete">Hapus</button>
+                </li>
+            </ul>
+        </section>
+
+        <!-- [Poin 2 & 3] Validasi Nama & Change Event Dropdown -->
+        <section class="section-box">
+            <h3>Form Workshop</h3>
+            <div class="form-group">
+                <label for="namaInput">Nama (Minimal 3 Karakter):</label>
+                <input type="text" id="namaInput" placeholder="Masukkan nama...">
+                <small id="namaError" class="error-text"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="sesiDropdown">Pilih Sesi Workshop:</label>
+                <select id="sesiDropdown">
+                    <option value="">-- Pilih Sesi --</option>
+                    <option value="Frontend Development">Frontend Development</option>
+                    <option value="Backend Development">Backend Development</option>
+                    <option value="UI/UX Design">UI/UX Design</option>
+                </select>
+            </div>
+
+            <!-- Tampilan Hasil Sesi Dipilih -->
+            <div class="result-box">
+                <p>Sesi Terpilih: <strong id="hasilSesi">- Belum Dipilih -</strong></p>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
